@@ -1,15 +1,4 @@
-Sayari Assessment – North Dakota Business Scraper
-1. Context
-Sayari specializes in collecting public data from around the globe — including corporate registries, civil litigation registries, import/export data, and more. The company uses this data for due diligence, risk management, financial intelligence, and compliance.
-
-This project simulates a real-world Sayari task:
-✅ Scraping public corporate registry data from the North Dakota Secretary of State website.
-✅ Extracting key business relationships (Commercial Registered Agent, Registered Agent, Owners).
-✅ Performing basic entity resolution by connecting companies to agents and owners.
-✅ Saving the results in structured formats for further use.
-
-2. Task Instructions
-The original Sayari task required:
+1. Task Instructions
 
 Access the North Dakota Secretary of State Business Search page.
 
@@ -27,7 +16,7 @@ Save the collected data into a file (CSV or JSON).
 
 Build a simple graph connecting companies, agents, and owners.
 
-3. Development Journey
+2. Development Journey
 First Attempt (nd_scraper.py)
 My initial scraper was built using Scrapy (nd_scraper.py).
 This first version:
@@ -68,7 +57,7 @@ Owner Name
 
 ✅ The final result was a complete, clean dataset in both CSV and JSON formats, meeting all Sayari task instructions.
 
-4. How the Scraper Solves the Task
+3. How the Scraper Solves the Task
 Using nd_fetch_details_api.py:
 
 Queries all active companies whose names start with "X."
@@ -91,7 +80,7 @@ companies_details_api.json
 
 Properly includes the Company Name, ID, Type (which of the 3 types it was), and the associated Name.
 
-5. Graphing Solution
+4. Graphing Solution
 A separate script uses NetworkX to:
 
 Create a graph where each company and agent/owner is a node.
